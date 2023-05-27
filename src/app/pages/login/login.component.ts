@@ -34,7 +34,7 @@ export class LoginComponent {
 
 
   get dadosForm() {
-    return this, this.loginForm.controls;
+    return this.loginForm.controls;
   }
 
 
