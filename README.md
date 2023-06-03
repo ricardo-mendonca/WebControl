@@ -30,3 +30,40 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Quality of the Code
 
 [![DeepScan grade](https://deepscan.io/api/teams/21293/projects/24728/branches/763749/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=21293&pid=24728&bid=763749)
+
+
+
+## src/app: 
+Esta é a pasta raiz onde você colocará todo o código relacionado à sua aplicação Angular.
+
+## src/app/auth: 
+você pode colocar o componente LoginPage e outros componentes relacionados à autenticação, como 
+
+## src/app/registerPage
+
+## src/app/forgotPasswordPage
+
+## src/app/components: 
+Aqui você pode criar uma pasta para cada componente reutilizável da sua aplicação, como botões, caixas de diálogo, barras de navegação, etc.
+
+## src/app/models: 
+Se você tiver modelos de dados ou interfaces que serão usados em toda a aplicação, pode ser útil colocá-los nesta pasta.
+
+## src/app/pages: 
+Esta pasta pode conter as páginas principais da sua aplicação, como a página inicial, página de perfil do usuário, página de configurações, etc.
+
+## src/app/services: 
+Aqui você pode colocar seus serviços, que são responsáveis pela lógica de negócios e interação com APIs externas.
+
+## src/app/shared: 
+Esta pasta pode conter componentes, serviços ou outros elementos compartilhados entre vários módulos ou partes da sua aplicação.
+
+## src/app/utils: 
+Se você tiver funções ou utilitários genéricos que podem ser usados em diferentes partes do projeto, esta pasta pode ser adequada para armazená-los.
+
+## src/assets: 
+Aqui você pode colocar arquivos estáticos, como imagens, fontes ou outros recursos.
+
+## src/environments: 
+Esta pasta pode conter arquivos de configuração específicos para cada ambiente (desenvolvimento, produção, etc.).
+
