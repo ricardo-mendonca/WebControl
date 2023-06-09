@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  constructor(public menuService: MenuService){}
+
+  ngOnInit(){
+    this.menuService.menuSelecionado = 1
+  }
 }
