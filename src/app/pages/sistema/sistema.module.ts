@@ -5,6 +5,7 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SistemaRoutingModule } from './sistema-routing.module';
 import { SistemaComponent } from './sistema.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   providers: [],
@@ -13,7 +14,8 @@ import { SistemaComponent } from './sistema.component';
     CommonModule,
     SistemaRoutingModule,
     NavbarModule,
-    SidebarModule
+    SidebarModule,
+    ReactiveFormsModule
   ],
 })
 export class SistemaModule {}
