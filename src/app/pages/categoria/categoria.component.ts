@@ -1,5 +1,9 @@
+/* eslint-disable no-var */
+/* eslint-disable no-debugger */
 /* eslint-disable @angular-eslint/use-lifecycle-interface */
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SelectModel } from 'src/app/models/SelectModel';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
@@ -10,12 +14,38 @@ import { MenuService } from 'src/app/services/menu.service';
 export class CategoriaComponent {
 
 
-  constructor(public menuService: MenuService){
-
+  constructor(public menuService: MenuService, public formBuilder: FormBuilder){
   }
+
+  listSistemas = new Array<SelectModel>();
+  sistemaSelect = new SelectModel();
+
+
+
+  categoriaForm: FormGroup;
 
   ngOnInit() {
     this.menuService.menuSelecionado = 3;
+
+    this.categoriaForm = this.formBuilder.group(
+        {
+          name: ['', [Validators.required]]
+        }
+      )
   }
+
+
+  dadorForm() {
+    return this.categoriaForm.controls;
+  }
+
+  enviar() {
+    debugger
+    var dados = this.dadorForm();
+
+    alert(dados["name"].value)
+  }
+
+
 
 }
