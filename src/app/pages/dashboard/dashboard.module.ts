@@ -4,7 +4,6 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
-import { CategoriaModule } from '../categoria/categoria.module';
 
 
 
@@ -16,8 +15,7 @@ import { CategoriaModule } from '../categoria/categoria.module';
             CommonModule,
             DashboardRoutingModule,
             NavbarModule,
-            SidebarModule,
-            CategoriaModule,
+            SidebarModule
         ]
     }
 )
