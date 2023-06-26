@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger */
-/* eslint-disable no-var */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MenuService } from 'src/app/services/menu.service';
