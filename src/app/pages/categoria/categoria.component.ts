@@ -1,11 +1,7 @@
-/* eslint-disable no-var */
-/* eslint-disable no-debugger */
-/* eslint-disable @angular-eslint/use-lifecycle-interface */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectModel } from 'src/app/models/SelectModel';
 import { MenuService } from 'src/app/services/menu.service';
-
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',

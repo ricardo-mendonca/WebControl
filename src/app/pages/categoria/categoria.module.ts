@@ -8,8 +8,6 @@ import { CategoriaRoutingModule } from './categoria-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 
-
-
 @NgModule(
     {
         providers: [],
