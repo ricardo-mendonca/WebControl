@@ -27,9 +27,9 @@
             <div class="row">
                 <div class="group-row">
                     <label>Valor</label>
-                    <input type="number" name="valor" id="valor" placeholder="Valor" formControlName="valor" required />
+                    <input type="text" name="valor" id="valor" placeholder="0,00" formControlName="valor" (input)="formatarMoeda($event);" required />
                     <label class="error-input" *ngIf="despesaForm.get('valor')?.errors?.['required'] &&
-                    despesaForm.get('valor')?.touched">
+                    despesaForm.get('valor')?.touched" >
                         Campo Obrigatório!
                     </label>
                 </div>
