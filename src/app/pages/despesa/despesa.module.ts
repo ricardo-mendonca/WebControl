@@ -9,7 +9,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DespesaComponent } from './despesa.component';
 
-
 @NgModule({
   providers: [],
   declarations: [DespesaComponent],
@@ -21,8 +20,7 @@ import { DespesaComponent } from './despesa.component';
 
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
   ],
 })
 export class DespesaModule {}
-
