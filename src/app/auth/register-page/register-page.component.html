@@ -1,0 +1,47 @@
+<div class="container-login">
+  <div class="container-login-central">
+
+    <div class="container-header">
+      <div class="titulo-login">Gambiarra</div>
+      <div class="info-login">!</div>
+    </div>
+
+    <div class="container-form" [formGroup]="CadastroForm">
+      <form class="form-inputs" >
+
+        <div class="group-input">
+          <div class="text-info">Nome</div>
+          <input class="input-form" type="text" name="nome" id="nome" placeholder="Nome" formControlName="nome" required="" />
+        </div>
+<br/>
+        <div class="group-input">
+          <div class="text-info">E-Mail</div>
+          <input class="input-form" type="text" name="email" id="email" placeholder="E-Mail" formControlName="email" required="" />
+        </div>
+<br/>
+        <div class="group-input">
+          <div class="text-info">Senha</div>
+          <input class="input-form" type="password" name="senha" id="senha" placeholder="Senha" formControlName="senha" required="" />
+        </div>
+<br/>
+        <div class="group-input">
+          <div class="text-info">Telefone</div>
+          <input class="input-form" type="text" name="telefone" id="telefone" placeholder="Telefone" formControlName="telefone" required="" (input)="formatarTelefone($event)"/>
+        </div>
+<br/>
+        <div class="group-input">
+          <input type="submit" class="btn-login" value="Login"/>
+        </div>
+<br/>
+        <div class="text-voltar" >
+          <a [routerLink]="['/login']" class="text-voltar" >Voltar</a>
+
+        </div>
+
+      </form>
+    </div>
+
+
+
+  </div>
+</div>
