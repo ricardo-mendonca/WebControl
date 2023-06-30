@@ -8,11 +8,15 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { forgotPasswordComponent } from './auth/forgotPassword/forgotPassword.component';
+import { RegisterPageComponent } from './auth/register-page/register-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    forgotPasswordComponent,
+    RegisterPageComponent,
 
 
   ],
