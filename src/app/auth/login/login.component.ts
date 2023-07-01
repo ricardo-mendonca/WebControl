@@ -20,7 +20,6 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group(
-      // eslint-disable-next-line no-unexpected-multiline
       {
         email: ['', [Validators.required, Validators.email]],
         senha: ['', [Validators.required]],
