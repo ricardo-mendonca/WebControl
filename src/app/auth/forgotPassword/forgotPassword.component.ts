@@ -22,7 +22,6 @@ export class forgotPasswordComponent {
     this.forgotPasswordForm = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
-        senha: ['', [Validators.required]],
       }
     );
   }
@@ -31,7 +30,7 @@ export class forgotPasswordComponent {
     return this.forgotPasswordForm.controls;
   }
 
-  loginUser() {
+  forgotUser() {
 
   }
 }
