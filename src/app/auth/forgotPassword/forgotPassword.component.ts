@@ -38,7 +38,6 @@ export class forgotPasswordComponent {
       (ret) => {
 
         var resposta = ret;
-        var objetoResposta = JSON.stringify(resposta);
         resposta = resposta["message"];
         alert(resposta);
         //console.log(objetoResposta);

@@ -39,7 +39,6 @@ export class RegisterPageComponent {
       (ret) => {
         console.log(ret);
         var resposta = ret;
-        var objetoResposta = JSON.stringify(resposta);
         resposta = resposta["message"];
         alert(resposta);
         //console.log(objetoResposta);
@@ -49,7 +48,6 @@ export class RegisterPageComponent {
       (err) => {
         console.log(err);
         var resposta = err.error;
-        var objetoResposta = JSON.stringify(resposta);
         resposta = resposta["message"];
         alert(resposta);
       }
