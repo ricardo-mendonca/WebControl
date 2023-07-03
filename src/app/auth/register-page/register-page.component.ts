@@ -38,11 +38,20 @@ export class RegisterPageComponent {
     .subscribe(
       (ret) => {
         console.log(ret);
+        var resposta = ret;
+        var objetoResposta = JSON.stringify(resposta);
+        resposta = resposta["message"];
+        alert(resposta);
+        //console.log(objetoResposta);
 
         this.router.navigate(['/login']);
       },
       (err) => {
-        alert('Ocorreu um erro');
+        console.log(err);
+        var resposta = err.error;
+        var objetoResposta = JSON.stringify(resposta);
+        resposta = resposta["message"];
+        alert(resposta);
       }
     );
   }

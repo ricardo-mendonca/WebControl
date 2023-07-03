@@ -35,8 +35,12 @@ export class LoginComponent {
     this.loginService
       .login(this.dadosForm['email'].value, this.dadosForm['senha'].value)
       .subscribe(
-        (accessToken) => {
-          console.log(accessToken);
+        (ret) => {
+          var resposta = ret;
+          var objetoResposta = JSON.stringify(resposta);
+          resposta = resposta["message"];
+          alert(resposta);
+          console.log(objetoResposta);
 
           this.router.navigate(['/dashboard']);
         },
