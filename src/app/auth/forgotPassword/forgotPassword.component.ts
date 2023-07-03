@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login.service';
+import { ForgotPasswordService } from 'src/app/services/forgotPassword.service';
+
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class forgotPasswordComponent {
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
-    private loginService: LoginService
+    private forgotPasswordService: ForgotPasswordService
   ) {}
 
   forgotPasswordForm: FormGroup;
@@ -31,6 +32,25 @@ export class forgotPasswordComponent {
   }
 
   forgotUser() {
+    this.forgotPasswordService
+    .ResetPassword(this.dadosForm['email'].value )
+    .subscribe(
+      (ret) => {
 
+        var resposta = ret;
+        var objetoResposta = JSON.stringify(resposta);
+        resposta = resposta["message"];
+        alert(resposta);
+        //console.log(objetoResposta);
+
+        this.router.navigate(['/login']);
+      },
+      (error) => {
+        var resposta = error;
+        //console.log(resposta.error.message);
+        resposta = resposta.error.message;
+        alert(resposta);
+      }
+    );
   }
 }
