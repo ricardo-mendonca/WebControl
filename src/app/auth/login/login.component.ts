@@ -36,16 +36,15 @@ export class LoginComponent {
       .login(this.dadosForm['email'].value, this.dadosForm['senha'].value)
       .subscribe(
         (ret) => {
-          var resposta = ret;
-          var objetoResposta = JSON.stringify(resposta);
-          resposta = resposta["message"];
-          alert(resposta);
-          console.log(objetoResposta);
+          console.log(ret);
 
           this.router.navigate(['/dashboard']);
         },
-        (err) => {
-          alert('Ocorreu um erro');
+        (error) => {
+          var resposta = error;
+        //console.log(resposta.error.message);
+        resposta = resposta.error.message;
+        alert(resposta);
         }
       );
   }
