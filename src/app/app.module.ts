@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 import {
   HTTPStatus,
   LoaderInterceptor,
