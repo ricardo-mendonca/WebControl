@@ -39,9 +39,11 @@ export class LoginComponent {
       .subscribe(
         (ret) => {
           console.log(ret);
+          console.log(ret["nome"]);
 
-          this.authService.setToken(ret.toString());
+          this.authService.setToken(ret["accessToken"].toString());
           this.authService.UsuarioAutenticado(true);
+          this.authService.setUsuarioName(ret["nome"]);
           this.router.navigate(['/dashboard']);
         },
         (error) => {
