@@ -10,6 +10,7 @@ export class AuthService {
     private usuarioAutenticadoPortal: boolean = false;
     private token: any;
     private user: any;
+    private usuarioName: any;
 
     constructor(private httpClient: HttpClient) {
     }
@@ -37,6 +38,16 @@ export class AuthService {
         this.token = localStorage.getItem('token');
         return this.token;
     }
+
+    setUsuarioName(usuarioName: string) {
+      localStorage.setItem('usuarioName', usuarioName);
+      this.usuarioName = usuarioName;
+  }
+
+  get getUsuarioName() {
+      this.usuarioName = localStorage.getItem('usuarioName');
+      return this.usuarioName;
+  }
 
     limparToken() {
         this.token = null;
