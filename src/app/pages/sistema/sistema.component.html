@@ -16,9 +16,9 @@
           <div class="row">
               <div class="group-row">
                   <label>Sistema</label>
-                  <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required />
-                  <label class="error-input" *ngIf="sistemaForm.get('name')?.errors?.['required'] &&
-                  sistemaForm.get('name')?.touched">
+                  <input type="text" name="descricao" id="descricao" placeholder="Nome" formControlName="descricao" required />
+                  <label class="error-input" *ngIf="sistemaForm.get('descricao')?.errors?.['required'] &&
+                  sistemaForm.get('descricao')?.touched">
                       Campo Obrigatório!
                   </label>
               </div>
